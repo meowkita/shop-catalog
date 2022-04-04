@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Store Catalog</title>
+</head>
+<body>
+    <h1>Store Catalog</h1>
+    <section>
+        <h2>Add new product</h2>
+        <div class="new-item-form">
+            <div class="new-item-form-block">
+                <label for="new-item-name">Name:</label>
+                <input type="text" id="new-item-name">
+            </div>
+            <div class="new-item-form-block">
+                <label for="new-item-name">Cost:</label>
+                <input type="number" id="new-item-cost">
+            </div>
+            <div class="new-item-form-block">
+                <input type="button" id="new-item-create" value="Add">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Catalog Search</h2>
+        <div>
+            <div class="toolbar">
+                <div class="toolbar-group">
+                    <span>Filter by name:</span>
+                    <input class="name-filter" type="text" id="name-filter">
+                </div>
+                <div class="toolbar-group">
+                    <span>Sort by:</span>
+                    <select id="sort-rule" class="browser-default">
+                        <option value="id-asc">ID: Ascending</option>
+                        <option value="id-desc">ID: Descending</option>
+                        <option disabled>----------------------------</option>
+                        <option value="name-asc">Name: Ascending</option>
+                        <option value="name-desc">Name: Descending</option>
+                        <option disabled>----------------------------</option>
+                        <option value="cost-asc">Cost: Ascending</option>
+                        <option value="cost-desc">Cost: Descending</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="row-id">ID</td>
+                            <td class="row-name">Name</td>
+                            <td class="row-cost">Cost</td>
+                            <td class="row-delete">Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="items-list"></tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+        <input type="button" id="load-mock-items" value="Load Mock Items">
+    </section>
+    <script type="module" src="./js/App.js"></script>
+</body>
+</html>
