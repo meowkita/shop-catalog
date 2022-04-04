@@ -6,3 +6,6 @@ A web application for the accounting of store products, written in pure JavaScri
 + Filter by given string
 + Sort fields by ID, Name and Cost (Asc & Desc)
 + Save/Load from local storage
+
+## Live preview on GitHub Pages
+https://meowkita.github.io/shop-catalog/
